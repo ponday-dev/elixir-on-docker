@@ -9,7 +9,7 @@ services:
       - "4000:4000"
     links: 
       - mariadb:mariadb
-    command: mix phx.server
+    command: /bin/bash -lc "mix phx.server"
     environment:
       - PORT:80
   mariadb:
