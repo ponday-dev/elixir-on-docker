@@ -38,7 +38,13 @@ config :phoenix_sample, PhoenixSample.Repo,
 
 （検証時点ならprod.secret.exsの編集は不要。）
 
-起動前にデータベースのセットアップが必要
+CSS/JSをビルド
+
+```sh
+docker-compose run app /bin/bash -lc "cd assets && npm install && node node_modules/brunch/bin/brunch build"
+```
+
+データベースのセットアップ
 
 ```sh
 docker-compose run app mix ecto.create
