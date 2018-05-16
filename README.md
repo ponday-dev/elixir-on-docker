@@ -32,7 +32,7 @@ config :phoenix_sample, PhoenixSample.Repo,
   password: "p@ssw0rd",
   database: "phoenixdb",
   hostname: "mariadb",
-  port: 3306
+  port: 3306,
   pool_size: 10
 ```
 
