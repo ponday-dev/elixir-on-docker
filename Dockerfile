@@ -1,4 +1,4 @@
-FROM elixir:1.6.5
+FROM elixir:1.6.5-slim
 
 ENV APP_DIR /app
 
