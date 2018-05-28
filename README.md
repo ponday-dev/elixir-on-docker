@@ -13,7 +13,7 @@ docker-compose build
 プロジェクトを作成する
 
 ```sh
-docker-compose run app mix phx.new . --app <app_name> --database mysql
+docker-compose run app /bin/bash -l "mix phx.new . --app <app_name> --database mysql"
 ```
 
 データベースの定義を変更する。
@@ -37,12 +37,6 @@ config :phoenix_sample, PhoenixSample.Repo,
 ```
 
 （検証時点ならprod.secret.exsの編集は不要。）
-
-CSS/JSをビルド
-
-```sh
-docker-compose run app /bin/bash -lc "cd assets && npm install && node node_modules/brunch/bin/brunch build"
-```
 
 データベースのセットアップ
 
