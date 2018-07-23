@@ -19,7 +19,8 @@ RUN apt-get update -y && \
     gnupg1 \
     gnupg2 \
     mysql-client \
-    inotify-tools \
-    erlang-dev
+    inotify-tools 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
+RUN apt-get clean
+
