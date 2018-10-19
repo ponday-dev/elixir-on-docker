@@ -13,9 +13,9 @@ services:
     environment:
       - PORT:80
   mariadb:
-    image: mariadb:latest
+    build: ./db
     volumes:
-      - ./data:/var/lib/mysql
+      - ./db/data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: p@ssw0rd
       MYSQL_USER: mariadb
