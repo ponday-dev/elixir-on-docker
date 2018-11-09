@@ -8,7 +8,7 @@ WORKDIR /app
 SHELL ["/bin/bash", "-lc"]
 
 RUN yes | mix local.hex
-RUN yes | mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
+RUN yes | mix archive.install hex phx_new 1.4.0
 RUN mix local.rebar --force
 
 RUN apt-get update -y && \
