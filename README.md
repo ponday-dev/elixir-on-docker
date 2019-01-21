@@ -33,7 +33,8 @@ config :phoenix_sample, PhoenixSample.Repo,
   database: "phoenixdb",
   hostname: "mariadb",
   port: 3306,
-  pool_size: 10
+  pool_size: 10,
+  charset: "utf8mb4"
 ```
 
 （検証時点ならprod.secret.exsの編集は不要。）
