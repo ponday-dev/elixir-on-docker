@@ -12,6 +12,8 @@ services:
       - "4000:4000"
     networks:
       - network
+    depends_on:
+      - mariadb
     command: /bin/bash -lc "mix phx.server"
     environment:
       - PORT:80
