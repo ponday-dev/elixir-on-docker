@@ -1,4 +1,4 @@
-FROM elixir:slim
+FROM elixir:1.8.1-slim
 
 ENV APP_DIR /app
 
@@ -8,7 +8,7 @@ WORKDIR /app
 SHELL ["/bin/bash", "-lc"]
 
 RUN yes | mix local.hex
-RUN yes | mix archive.install hex phx_new 1.4.0
+RUN yes | mix archive.install hex phx_new 1.4.1
 RUN mix local.rebar --force
 
 RUN apt-get update -y && \
